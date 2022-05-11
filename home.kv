@@ -1,0 +1,44 @@
+#:import get_color_from_hex kivy.utils.get_color_from_hex
+<Home>
+    MDScreen:
+        name: "HomeScr"
+
+        MDBottomNavigation:
+            selected_color_background: get_color_from_hex("#3474B9")
+            text_color_active: get_color_from_hex("#3474B9")
+
+            MDBottomNavigationItem:
+                selected_color_background: get_color_from_hex("#3474B9")
+                text_color_active: get_color_from_hex("#3474B9")
+                name: "MainMenu"
+                icon: "home-variant-outline"
+
+                MDFloatLayout:
+                    Image:
+                        source: "assets/avatar profile.png"
+                        pos_hint: {'center_x': 0.20, 'center_y':0.90}
+                    Image:
+                        source: "assets/Menu.png"
+                        size: root.size
+                        size_hint: 1,1
+                        keep_ratio: False
+                        pos_hint: {'center_x': 0.5, 'center_y':0.7}
+                    MDLabel:
+                        text: "Welcome back,"
+                        font_size: 14
+                        font_name: "assets/Fonts/Inter/static/Inter-Regular.ttf"
+                        pos_hint: {'center_x': 0.85, 'center_y':0.92}
+                    MDLabel:
+                        text: "David"
+                        font_size: 22
+                        font_name: "assets/Fonts/Inter/static/Inter-Bold.ttf"
+                        pos_hint: {'center_x': 0.85, 'center_y':0.89}
+
+
+
+            MDBottomNavigationItem:
+                name: "Input"
+                icon: "cash-plus"
+                MDLabel:
+                    text: 'input screen'
+                    halign: 'center'
